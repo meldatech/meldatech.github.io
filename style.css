@@ -81,25 +81,43 @@ header nav a {
     border-radius: 10px;
 }
 
-/* Partners */
+/* Partners Section */
 .partners {
     text-align: center;
     padding: 50px 0;
     background-color: #f4f4f4;
+    overflow: hidden; /* Prevents scrolling issues */
 }
+
 .logo-carousel {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    animation: scroll 10s linear infinite;
+    gap: 50px; /* Space between logos */
+    align-items: center;
+    animation: moveLogos 20s linear infinite; /* Continuous movement */
 }
+
 .logo-carousel img {
-    height: 60px;
+    height: 120px; /* Adjust size */
+    max-width: 200px;
+    object-fit: contain; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Hover effect */
 }
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+
+.logo-carousel img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
+
+/* Animation for moving logos */
+@keyframes moveLogos {
+    from {
+        transform: translateX(100%); /* Start from off-screen to the right */
+    }
+    to {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+
 
 /* Contact */
 .contact {
