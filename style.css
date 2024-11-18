@@ -2,7 +2,7 @@
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 ul {
     list-style-type: none;
@@ -38,19 +38,26 @@ header nav a {
 
 /* Hero Section */
 .hero {
-    background: url('assets/images/hero_bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(120deg, #007BFF, #00BFFF);
     color: white;
     text-align: center;
     padding: 100px 0;
 }
 .hero h1 {
     font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 .hero .btn {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: white;
+    color: #007BFF;
     border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* About Section */
@@ -63,10 +70,16 @@ header nav a {
 .services {
     background-color: #f4f4f4;
     padding: 50px 0;
+    text-align: center;
 }
 .services .service {
-    text-align: center;
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
     padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 /* Contact */
