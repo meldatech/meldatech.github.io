@@ -1,0 +1,96 @@
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+header .logo {
+    height: 50px;
+}
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+header nav a {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/images/hero_bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h1 {
+    font-size: 2.5em;
+}
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Services */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+.services .service {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contact */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+.contact form input, .contact form textarea, .contact form button {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+}
+.contact form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
