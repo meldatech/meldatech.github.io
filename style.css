@@ -60,12 +60,6 @@ header nav a {
     cursor: pointer;
 }
 
-/* About Section */
-.about {
-    padding: 50px 0;
-    text-align: center;
-}
-
 /* Services */
 .services {
     background-color: #f4f4f4;
