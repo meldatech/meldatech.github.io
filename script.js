@@ -1,16 +1,16 @@
-// Initialize EmailJS with your Public Key
-emailjs.init('Gn5ed9KUh2Jkks_o9'); // Your Public Key
+
+emailjs.init('Gn5ed9KUh2Jkks_o9');
 
 // Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form refresh
 
-    // Collect form data
+    
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Basic validation
+    
     if (!name || !email || !message) {
         alert('All fields are required. Please fill out the form completely.');
         return;
@@ -46,7 +46,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     );
 });
 
-// Partners Slider Functionality
+
 const slider = document.querySelector('.partners-slider');
 let isDragging = false;
 let startPos = 0;
