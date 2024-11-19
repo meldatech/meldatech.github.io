@@ -98,6 +98,7 @@ header nav a:hover {
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 800px;
+    animation: fadeInUp 0.6s ease-in-out; /* Animation */
 }
 .services .service:hover {
     transform: translateY(-10px);
@@ -190,4 +191,51 @@ footer {
     padding: 15px 0;
     font-size: 0.9em;
     border-top: 4px solid #007BFF;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        padding: 80px 15px;
+    }
+    .services .service {
+        margin: 20px;
+    }
+    .contact form input, .contact form textarea, .contact form button {
+        width: 90%;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+body.dark-mode header {
+    background-color: #333;
+}
+body.dark-mode footer {
+    background-color: #333;
+}
+body.dark-mode .contact form input,
+body.dark-mode .contact form textarea {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-color: #555;
 }

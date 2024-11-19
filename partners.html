@@ -3,38 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeldaTech - Partners</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Redirecting to Partners Section</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="assets/logo.png" alt="MeldaTech Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="partners">
+        <h2>Our Trusted Partners</h2>
+        <p>We collaborate with leading organizations to deliver cutting-edge AI solutions.</p>
+        <div class="logo-carousel">
+            <img src="assets/logos/Baidu.png" alt="Baidu - AI and Data Solutions">
+            <img src="assets/logos/csail.png" alt="CSAIL - AI Research Collaboration">
+            <img src="assets/logos/face.png" alt="Face++ - Computer Vision Partner">
         </div>
-    </header>
-
-    <section class="partners">
-        <div class="container">
-            <h2>Our Trusted Partners</h2>
-            <div class="logo-carousel">
-                <img src="assets/logos/Baidu.png" alt="Baidu - AI and Data Solutions">
-                <img src="assets/logos/csail.png" alt="CSAIL - AI Research Collaboration">
-                <img src="assets/logos/face.png" alt="Face++ - Computer Vision Partner">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 MeldaTech. All rights reserved.</p>
-    </footer>
+    </div>
+    <script>
+        // Redirect standalone page to the homepage's #partners section
+        window.location.replace('index.html#partners');
+    </script>
 </body>
 </html>
