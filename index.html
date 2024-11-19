@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeldaTech</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Updated EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -38,42 +39,38 @@
             <h2>Our Services</h2>
             <div class="service">
                 <h3>Data Crawling</h3>
-                <p>We use advanced web crawlers to source and download data for our customers. Our expertise includes:
-                    <ul>
-                        <li>Dynamic web scraping for large-scale data extraction.</li>
-                        <li>Automated data retrieval from APIs and JavaScript-rendered content.</li>
-                        <li>Content monitoring for real-time updates.</li>
-                    </ul>
-                </p>
+                <p>We use advanced web crawlers to source and download data for our customers.</p>
+                <ul>
+                    <li>Dynamic web scraping for large-scale data extraction.</li>
+                    <li>Automated data retrieval from APIs and JavaScript-rendered content.</li>
+                    <li>Content monitoring for real-time updates.</li>
+                </ul>
             </div>
             <div class="service">
                 <h3>Annotation</h3>
-                <p>We label data using large language models (LLMs) and human supervision to ensure high accuracy. Examples include:
-                    <ul>
-                        <li>Text annotation for entity recognition and sentiment analysis.</li>
-                        <li>Semantic segmentation and bounding box annotation for images.</li>
-                        <li>Video annotation for motion tracking and event detection.</li>
-                    </ul>
-                </p>
+                <p>We label data using large language models (LLMs) and human supervision to ensure high accuracy.</p>
+                <ul>
+                    <li>Text annotation for entity recognition and sentiment analysis.</li>
+                    <li>Semantic segmentation and bounding box annotation for images.</li>
+                    <li>Video annotation for motion tracking and event detection.</li>
+                </ul>
             </div>
             <div class="service">
                 <h3>Labeling</h3>
-                <p>We provide precise and scalable labeling services for diverse datasets:
-                    <ul>
-                        <li>Classification of text, images, and audio for machine learning.</li>
-                        <li>Multi-label tagging and domain-specific categorization.</li>
-                    </ul>
-                </p>
+                <p>We provide precise and scalable labeling services for diverse datasets:</p>
+                <ul>
+                    <li>Classification of text, images, and audio for machine learning.</li>
+                    <li>Multi-label tagging and domain-specific categorization.</li>
+                </ul>
             </div>
             <div class="service">
                 <h3>End-to-End Model Learning</h3>
-                <p>Comprehensive solutions for machine learning workflows:
-                    <ul>
-                        <li>Preprocessing and cleaning raw datasets.</li>
-                        <li>Training and fine-tuning deep learning models.</li>
-                        <li>Deploying models using cloud-native architectures.</li>
-                    </ul>
-                </p>
+                <p>Comprehensive solutions for machine learning workflows:</p>
+                <ul>
+                    <li>Preprocessing and cleaning raw datasets.</li>
+                    <li>Training and fine-tuning deep learning models.</li>
+                    <li>Deploying models using cloud-native architectures.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -95,9 +92,9 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
