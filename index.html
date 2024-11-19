@@ -26,14 +26,45 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI Solutions for Data Crawling and Annotation</h1>
-            <p>Revolutionizing industries with cutting-edge data crawling, annotation, labeling, and AI model development.</p>
+            <h1>Empowering Businesses with AI-Driven Solutions</h1>
+            <p>
+                At MeldaTech, we specialize in scalable data crawling, annotation, labeling, 
+                and end-to-end AI model learning. Revolutionize your business with intelligent solutions.
+            </p>
             <a href="services.html" class="btn">Explore Our Services</a>
         </div>
     </section>
 
+    <!-- Placeholder for Partners Section -->
+    <section id="partners-placeholder"></section>
+
+    <!-- Placeholder for Contact Section -->
+    <section id="contact-placeholder"></section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 MeldaTech. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://meldatech.github.io" title="Visit MeldaTech Home">MeldaTech</a>. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Script to Dynamically Load Sections -->
+    <script>
+        // Dynamically load Partners Section
+        fetch('partners.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('partners-placeholder').innerHTML = html;
+            })
+            .catch(err => console.error('Error loading partners.html:', err));
+
+        // Dynamically load Contact Section
+        fetch('contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('contact-placeholder').innerHTML = html;
+            })
+            .catch(err => console.error('Error loading contact.html:', err));
+    </script>
 </body>
 </html>
