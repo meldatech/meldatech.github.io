@@ -1,5 +1,5 @@
-// Initialize EmailJS with your User ID
-emailjs.init('zakir'); // Replace 'Zakir' with your EmailJS User ID
+// Initialize EmailJS with your Public Key
+emailjs.init('Gn5ed9KUh2Jkks_o9'); // Your Public Key
 
 // Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -11,11 +11,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const message = document.getElementById('message').value;
 
     // Send email using EmailJS
-    emailjs.send('service_ittx4ic', 'zakir', {
+    emailjs.send('service_ittx4ic', 'template_ez79cmh', {
         from_name: name,
         from_email: email,
         message: message,
-    }, 'X-i0wgx0J4jtUaGZfruu6') // Private API Key as the 4th argument
+    }, 'Gn5ed9KUh2Jkks_o9') // Your Public Key
     .then(
         function(response) {
             alert('Thank you for reaching out! We will get back to you soon.');
