@@ -1,18 +1,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://meldatech.github.io/index.html</loc>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
+
+  <!-- Services Page -->
   <url>
     <loc>https://meldatech.github.io/services.html</loc>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- Partners Page -->
   <url>
     <loc>https://meldatech.github.io/partners.html</loc>
     <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- Contact Page -->
   <url>
     <loc>https://meldatech.github.io/contact.html</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
