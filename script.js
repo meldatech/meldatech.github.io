@@ -10,6 +10,17 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
+    // Basic validation
+    if (!name || !email || !message) {
+        alert('All fields are required. Please fill out the form completely.');
+        return;
+    }
+
+    // Show loading indicator
+    const button = document.querySelector('#contact-form button');
+    button.textContent = 'Sending...';
+    button.disabled = true;
+
     // Send email using EmailJS
     emailjs.send('service_ittx4ic', 'template_ez79cmh', {
         from_name: name,
@@ -20,10 +31,17 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         function(response) {
             alert('Thank you for reaching out! We will get back to you soon.');
             console.log('SUCCESS!', response.status, response.text);
+            // Reset form and button state
+            document.getElementById('contact-form').reset();
+            button.textContent = 'Send Message';
+            button.disabled = false;
         },
         function(error) {
             console.error('FAILED...', error);
             alert('An error occurred. Please try again later.');
+            // Reset button state
+            button.textContent = 'Send Message';
+            button.disabled = false;
         }
     );
 });
