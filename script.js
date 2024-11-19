@@ -45,3 +45,33 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         }
     );
 });
+
+// Partners Slider Functionality
+const slider = document.querySelector('.partners-slider');
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+
+slider.addEventListener('mousedown', dragStart);
+slider.addEventListener('mouseup', dragEnd);
+slider.addEventListener('mouseleave', dragEnd);
+slider.addEventListener('mousemove', dragMove);
+
+function dragStart(e) {
+    isDragging = true;
+    startPos = e.pageX - slider.offsetLeft;
+}
+
+function dragEnd() {
+    isDragging = false;
+    prevTranslate = currentTranslate;
+}
+
+function dragMove(e) {
+    if (isDragging) {
+        const currentPosition = e.pageX - slider.offsetLeft;
+        currentTranslate = prevTranslate + currentPosition - startPos;
+        slider.style.transform = `translateX(${currentTranslate}px)`;
+    }
+}
