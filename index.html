@@ -6,6 +6,25 @@
     <title>MeldaTech - Empowering AI Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Partners Section Slider */
+        .partners-slider {
+            display: flex;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .partner-slide {
+            min-width: 200px;
+            margin: 0 10px;
+            transition: transform 0.5s ease;
+        }
+        .partners-slider img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -94,5 +113,36 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Simple slider functionality for partners section
+        const slider = document.querySelector('.partners-slider');
+        let isDragging = false;
+        let startPos = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+
+        slider.addEventListener('mousedown', dragStart);
+        slider.addEventListener('mouseup', dragEnd);
+        slider.addEventListener('mouseleave', dragEnd);
+        slider.addEventListener('mousemove', dragMove);
+
+        function dragStart(e) {
+            isDragging = true;
+            startPos = e.pageX - slider.offsetLeft;
+        }
+
+        function dragEnd() {
+            isDragging = false;
+            prevTranslate = currentTranslate;
+        }
+
+        function dragMove(e) {
+            if (isDragging) {
+                const currentPosition = e.pageX - slider.offsetLeft;
+                currentTranslate = prevTranslate + currentPosition - startPos;
+                slider.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+    </script>
 </body>
 </html>
